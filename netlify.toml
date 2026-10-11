@@ -1,0 +1,10 @@
+# netlify.toml — how Netlify builds and serves this app. SPA fallback sends every
+# path to index.html so client-side routes survive a refresh or deep link.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

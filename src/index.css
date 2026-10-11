@@ -1,0 +1,11 @@
+/* index.css — the only global stylesheet. Order matters: fonts, Tailwind, Tiny Wire
+   tokens, then anything project-specific. Override a token here, never in tiny-wire/. */
+@import './styles/tiny-wire/fonts.css';
+@import 'tailwindcss';
+@import './styles/tiny-wire/tokens.css';
+
+body {
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}

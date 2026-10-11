@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Default meta / OG tags. Replace title, description and og:image per project. -->
+    <title>Tiny App</title>
+    <meta name="description" content="A small, fast prototype built on Tiny Wire." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tiny App" />
+    <meta property="og:description" content="A small, fast prototype built on Tiny Wire." />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Apply the saved theme before first paint so dark mode never flashes light. -->
+    <script>
+      try {
+        const t = localStorage.getItem('tw-theme')
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.setAttribute('data-theme', 'dark')
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

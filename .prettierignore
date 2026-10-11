@@ -1,0 +1,5 @@
+# Prettier never touches build output, lockfiles, or vendored Tiny Wire files.
+dist
+node_modules
+package-lock.json
+src/styles/tiny-wire/
